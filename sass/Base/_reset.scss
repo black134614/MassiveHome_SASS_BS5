@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $color-dark-0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: $fs-0;
+    font-weight: $fw-0;
+    line-height: $lh-0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $fw-0;
+    line-height: $lh-0;
+}
+a{
+    text-decoration: none;
+    transition: all 0.3s;
+}
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 1px solid $color-white-4;
+}

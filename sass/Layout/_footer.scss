@@ -1,0 +1,114 @@
+footer {
+    .primary-footer {
+    padding: 80px 0;
+    background: $color-dark-1;
+        .footer-logo {
+            margin-bottom: 20px;
+            img {
+                height: 100px;
+                width: auto;
+            }
+        }
+        p {
+            margin: 0 0 30px;
+            color: $color-dark-6;
+            line-height: $lh-4;
+        }
+        h5 {
+            letter-spacing: 1px;
+            color: $color-white-0;
+            text-transform: uppercase;
+        }
+        .vertical-menu {
+            li {
+                border-bottom: 1px solid $color-dark-12;
+                a {
+                    display: block;
+                    color: $color-dark-16;
+                    line-height: $lh-3;
+                    transition: all 0.5s;
+                    &::before {
+                        padding-right: 15px;
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "\f054";
+                    }
+                }
+                &:hover{
+                    a{
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+        }
+        .img-list {
+            li {
+                a {
+                    width: 55px;
+                    height: 55px;
+                    float: left;
+                    margin: 0 10px 10px 0;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .secondary-footer {
+        display: inline-block;
+        width: 100%;
+        padding: 35px 0;
+        border-top: 1px solid $color-dark-17;
+        background: $color-dark-3;
+        font-weight: normal;
+        .copy-right {
+            text-align: start;
+            margin-top: 10px;
+            color: $color-dark-18;
+            .link {
+                color: $color-white-0;
+                transition: all 0.3s;
+            }
+        }
+        .social-link {
+            a {
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                border: 1px solid $color-dark-8;
+                border-radius: 50%;
+                line-height: 35px;
+                display: inline-block;
+                margin: 0 0 0 15px;
+                color: $color-dark-4;
+                font-size: $fs-3;
+                transition: all 0.3s;
+                i {
+                    color: $color-dark-4;
+                    transition: all 0.3s;
+                }
+                &:hover{
+                    background: $color-dark-4;
+                    border: 1px solid $color-dark-4;
+                    i{
+                        color: $color-white-0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(lg){
+    .social-link {
+        margin-left: -15px;
+        margin-top: 10px;
+    }
+}

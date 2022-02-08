@@ -1,0 +1,172 @@
+.sect-team {
+    .flex-box-header {
+        .heading-title {
+            h3 {
+            }
+            p {
+            }
+        }
+    }
+    .team-item {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .team-intro {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            width: 70%;
+            padding: 10px 20px;
+            text-align: right;
+            background: $color-dark-overlay-2;
+            color: #fff;
+            h5 {
+                margin-bottom: 0;
+                letter-spacing: $ls-4;
+                text-transform: uppercase;
+                font-size: $fs-7;
+            }
+            span {
+                margin-bottom: 0;
+                letter-spacing: $ls-4;
+                text-transform: uppercase;
+                font-size: $fs-1;
+            }
+        }
+        .item-detail {
+            position: absolute;
+            top: 0;
+            right: 30px;
+            bottom: 0;
+            left: 30px;
+            margin: 0;
+            transition: all 0.3s;
+            opacity: 0;
+            border: 20px solid $color-dark-overlay-1;
+            background-color: $color-white-overlay-0;
+            h4 {
+                padding-top: 20%;
+                margin-bottom: 25px;
+                letter-spacing: $ls-7;
+                text-transform: uppercase;
+                font-size: $fs-7;
+                text-align: center;
+                color: $color-dark-2;
+                transform: translateY(-100%);
+                transition: all 0.3s;
+                transition-delay: 0.3s;
+                opacity: 0;
+            }
+            p {
+                margin-bottom: 0;
+                color: $color-dark-6;
+                font-size: $fs-7;
+                font-weight: $fw-0;
+                line-height: $lh-4;
+                margin: 0 0 30px;
+                transform: translateY(-100%);
+                transition: all 0.3s;
+                transition-delay: 0.3s;
+                opacity: 0;
+            }
+        }
+        .item-link {
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            transition: all 0.3s;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+            text-align: center;
+            opacity: 0;
+            font-size: 35px;
+            a {
+                text-align: center;
+                color: $color-dark-2;
+                margin: 0 10px;
+                font-size: $fs-9;
+            }
+        }
+        &:hover {
+            .item-detail {
+                opacity: 1;
+                h4 {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                p {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .item-link {
+                opacity: 1;
+                transform: translateY(-100%);
+            }
+        }
+    }
+    .team-hiring {
+        background-color: $color-white-2;
+        margin-top: 100px;
+        padding: 40px;
+        .wrapper {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .hiring-left {
+                h4 {
+                    font-size: $fs-10;
+                    margin-bottom: 0;
+                    letter-spacing: $ls-1;
+                    text-transform: uppercase;
+                }
+                p {
+                    margin-top: 10px;
+                    color: $color-dark-6;
+                }
+            }
+            .hiring-right {
+                text-align: right;
+                .btn-hiring {
+                    padding: 15px 30px;
+                    margin-right: 0;
+                    transition: all 0.3s;
+                    color: $color-white-0;
+                    background: $color-dark-1;
+                    text-decoration: none;
+                    &:hover{
+                        background: $color-yellow-0;
+                    }
+                }
+            }
+        }
+    }
+}
+//max-width: 992px
+@include responsive(lg) {
+    .team-hiring {
+        .wrapper {
+            .hiring-right{
+                min-width: 25%;
+            }
+        }
+    }
+}
+//max-width: 768
+@include responsive(md) {
+    .team-hiring {
+        .wrapper {
+            display: block!important;
+            .hiring-right{
+                margin-top: 35px!important;
+                text-align: left!important;
+            }
+        }
+    }
+}

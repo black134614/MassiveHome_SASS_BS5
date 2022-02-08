@@ -1,0 +1,42 @@
+.sect-review {
+    padding: 50px 0;
+    .item {
+        margin: 20px;
+        text-align: center;
+        .item-thumb {
+            width: 100px;
+            height: auto;
+            margin: auto;
+            margin-bottom: 20px;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+        }
+        .item-content {
+            p {
+                font-size: $fs-9;
+                font-style: italic;
+                line-height: $lh-4;
+                margin: 0 0 30px;
+                color: $color-dark-6;
+            }
+            .authour {
+                margin-top: 10px;
+                letter-spacing: $ls-4;
+                text-transform: uppercase;
+                color: $color-dark-1;
+                font-size: $fs-7;
+                span {
+                    display: block;
+                    color: $color-dark-15;
+                    font-size: $fs-1;
+                    letter-spacing: $ls-4;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

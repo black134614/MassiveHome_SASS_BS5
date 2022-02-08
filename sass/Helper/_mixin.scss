@@ -1,0 +1,29 @@
+
+@mixin responsive($screen) {
+    @if map-has-key($map:$breakpoints, $key:$screen){
+        $value: map-get($map:$breakpoints , $key:$screen);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "`{$screen}` isn't exist in breakpoints";
+    }
+}
+
+@mixin btn-theme(){
+
+}
+@mixin sect-heading-title ($magin-bottom, $padding-bottom, $font-size, $letter-spacing, $font-weight){
+    margin-bottom: $magin-bottom;
+    padding-bottom: $padding-bottom;
+    font-size: $font-size;    
+    letter-spacing: $letter-spacing;
+    font-weight: $font-weight;
+}
+@mixin sect-heading-p ($width, $magin-top-bottom, $color, $line-height){
+    width: $width;
+    margin: $magin-top-bottom auto;
+    color: $color;
+    line-height: $line-height;
+}

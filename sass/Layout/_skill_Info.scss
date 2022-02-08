@@ -1,0 +1,134 @@
+.sect-skill-info {
+    background-image: url(../img/paralax/4.jpg);
+    height: calc(100vh - 60px) !important;
+    .left-box {
+        display: flex;
+        align-items: center;
+        letter-spacing: $ls-3;
+        .flex-box-header {
+            .header-title {
+                color: $color-white-0;
+            }
+        }
+    }
+    .right-box {
+        height: calc(100vh - 60px) !important;
+        padding: 0 $pd-4;
+        color: $color-white-0;
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+        justify-content: center;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50vw;
+            z-index: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .flex-box-header {
+            position: relative;
+            .heading-title {
+                letter-spacing: $ls-4;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            .detail {
+                margin: 0 0 30px;
+                color: $color-dark-6;
+                line-height: $lh-4;
+                color: $color-white-0;
+            }
+        }
+
+        .flex-box-detail {
+            position: relative;
+            padding-top: $pd-t-0;
+            .progress {
+                overflow: visible;
+                height: 20px;
+                margin-top: 10px;
+                margin-bottom: 50px;
+                letter-spacing: $ls-1;
+                text-transform: uppercase;
+                border-radius: 0;
+                background: $color-white-1;
+                box-shadow: none;
+                font-weight: 400;
+                .progress-bar {
+                    color: $color-dark-1;
+                    background: $color-white-0;
+                    position: relative;
+                    overflow: visible;
+                    padding-top: 0;
+                    padding-left: 10px;
+                    text-align: left;
+                    color: $color-dark-2;
+                    box-shadow: none;
+                    font-size: $fs-5;
+                    line-height: $lh-7;
+                    span {
+                        position: absolute;
+                        top: -28px;
+                        right: -5px;
+                        display: inline-block;
+                        min-width: 25px;
+                        height: 20px;
+                        padding: 0 8px;
+                        text-align: center;
+                        letter-spacing: $ls-5;
+                        color: $color-white-0;
+                        border-radius: 30px;
+                        background-color: $color-dark-8;
+                        line-height: 20px;
+                        &::before {
+                            position: absolute;
+                            bottom: -2px;
+                            left: 15px;
+                            display: block;
+                            width: 5px;
+                            height: 5px;
+                            content: "";
+                            transform: rotate(45deg);
+                            border-style: none;
+                            -o-border-image: none;
+                            border-image: none;
+                            border-color: $color-dark-8;
+                            border-right: 1px solid $color-dark-8;
+                            border-image: none;
+                            background-color: $color-dark-8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include responsive(md) {
+    .sect-skill-info {
+        padding: 50px 0;
+        height: auto!important;
+        .left-box{
+            .flex-box-header{
+                height: 400px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                .header-title {
+                    font-size: 20px;
+                }
+            }
+        }
+        .right-box{
+            padding: 0;
+            margin: 0;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

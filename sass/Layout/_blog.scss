@@ -1,0 +1,110 @@
+.sect-blog {
+    padding: 100px 0;
+    .flex-box-header {
+        margin-bottom: $mg-b-0;
+        .heading-title {
+            h3 {
+                @include sect-heading-title(20px, 10px, $fs-6, $ls-4, $fw-0);
+            }
+            p {
+                @include sect-heading-p(60%, 0, $color-dark-6, $lh-5);
+            }
+        }
+    }
+    .flex-box-body {
+        .post-img {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px;
+                color: $color-white-0;
+                background: $color-dark-overlay-0;
+            }
+        }
+        .post-desk {
+            height: 309px;
+            padding: 30px 0;
+            .post-cat {
+                margin-top: 0;
+                margin-bottom: 10px;
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    a {
+                        text-transform: uppercase;
+                        color: $color-dark-13;
+                        font-size: $fs-1;
+                        letter-spacing: $ls-1;
+                        transition: all 0.3s;
+                        &:hover {
+                            color: $color-yellow-0;
+                        }
+                        &::after {
+                            content: ",";
+                        }
+                    }
+                }
+            }
+            h4 {
+                margin-bottom: 10px;
+                letter-spacing: $ls-1;
+                font-size: $fs-10;
+                a {
+                    color: $color-dark-1;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+                }
+            }
+            .date {
+                color: $color-dark-13;
+                font-size: $fs-1;
+                float: left;
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 25px;
+                padding-top: 0;
+                letter-spacing: $ls-4;
+                text-transform: uppercase;
+                background: none;
+                .author {
+                    color: $color-dark-13;
+                    font-size: $fs-1;
+                    &:hover {
+                        color: $color-yellow-0;
+                    }
+                    &::after {
+                        content: "|";
+                        padding-right: 5px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            p {
+                line-height: $lh-4;
+                margin: 0 0 30px;
+                color: $color-dark-6;
+            }
+            .read-more {
+                position: relative;
+                text-transform: uppercase;
+                color: $color-dark-14;
+                letter-spacing: $ls-1;
+                span {
+                    position: absolute;
+                    top: 2px;
+                    margin-left: 10px;
+                    font-weight: $fw-2;
+                }
+            }
+        }
+    }
+}

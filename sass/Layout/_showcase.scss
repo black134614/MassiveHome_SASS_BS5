@@ -1,0 +1,132 @@
+.sect-showcase {
+    padding-bottom: 0!important;
+    .heading-content {
+        .heading-title {
+            h3 {
+            }
+            .half-txt {
+            }
+        }
+    }
+    .body-content.item-gallery-menu {
+        .item-filter {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .item {
+                a {
+                    color: $color-dark-2;
+                    margin: 0 15px;
+                    letter-spacing: $ls-6;
+                    text-transform: uppercase;
+                    color: $color-dark-10;
+                    font-size: $fs-7;
+                    text-decoration: none;
+                    transition: all 0.3s;
+                }
+                &.active,
+                &:hover {
+                    a {
+                        color: $color-dark-2;
+                    }
+                }
+            }
+        }
+        .item-list {
+            margin-top: $mg-t-0;
+            .item {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .item-detail {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: 0;
+                    transition: all 0.3s;
+                    opacity: 0;
+                    border: 20px solid $color-dark-overlay-1;
+                    background-color: $color-white-overlay-0;
+                    &:hover {
+                        opacity: 1;
+                        .item-btn {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                        .wrap-content {
+                            opacity: 1;
+                            transform: translateY(0);
+                            .item-title {
+                            }
+                            .item-desc {
+                            }
+                        }
+                    }
+                    .item-btn {
+                        position: absolute;
+                        top: 0;
+                        bottom: 55%;
+                        width: 100%;
+                        transition: all 0.3s;
+                        text-align: center;
+                        opacity: 0;
+                        font-size: $fs-8;
+                        color: $color-dark-2;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: center;
+                        transform: translateY(-30%);
+                    }
+                    .wrap-content {
+                        position: absolute;
+                        top: 55%;
+                        bottom: 0;
+                        width: 100%;
+                        transition: all 0.3s;
+                        opacity: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        transform: translateY(40%);
+                        .item-title {
+                            display: block;
+                            color: $color-dark-2;
+                            margin-bottom: 5px;
+                            letter-spacing: $ls-7;
+                            text-transform: uppercase;
+                            font-size: $fs-7;
+                            text-decoration: none;
+                            transition: all 0.3s;
+                            &:hover {
+                                color: $color-yellow-0;
+                            }
+                        }
+                        .item-desc {
+                            display: block;
+                            margin-bottom: 0;
+                            letter-spacing: $ls-6;
+                            text-transform: uppercase;
+                            color: $color-dark-11;
+                            font-size: $fs-1;
+                            font-weight: $fw-1;
+                            margin: 0 0 30px;
+                            line-height: $lh-4;
+                            text-decoration: none;
+                            transition: all 0.3s;
+                            &:hover {
+                                color: $color-yellow-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

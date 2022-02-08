@@ -1,0 +1,39 @@
+.sect-number-project {
+    padding: 100px 0;
+    background: #1b1b1b;
+    .item {
+        text-align: center;
+        .icon {
+            display: inline-block;
+            float: none;
+            margin-top: 0;
+            margin-bottom: 10px;
+            span {
+                padding-right: 10px;
+                font-size: $fs-11;
+                color: $color-white-0;
+            }
+            .counter {
+                display: inline-block;
+                margin-bottom: 0;
+                color: $color-white-0;
+                letter-spacing: 2px;
+                font-size: $fs-11;
+            }
+        }
+        .item-info {
+            span {
+                color: $color-white-0;
+                letter-spacing: $ls-4;
+            }
+        }
+    }
+}
+
+@include responsive(md){
+    .sect-number-project{
+        .item{
+            padding: 30px 0;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.header_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: $height-0;
+    background: $color-dark-5;
+    transition: 0.3s all;
+    &.roll-active {
+        height: $height-2;
+    }
+    .navbar-brand {
+        padding: $pd-0;
+        .img-brand {
+            top: -2px;
+            display: inline-block;
+            max-height: 100%;
+            padding: 2px 0;
+            height: $height-0;
+            transition: all 0.3s;
+            &.roll-active {
+                height: $height-2;
+            }
+        }
+    }
+    .navbar-toggler {
+        i {
+            color: $color-white-0;
+        }
+    }
+    .main-menu {
+        text-transform: uppercase;
+        letter-spacing: $ls-0;
+        margin-left: auto;
+        font-size: $fs-2;
+        .nav-item {
+            padding: $pd-0 $pd-2;
+            &.diliver-vertical {
+                color: $color-white-0;
+                font-weight: $fw-0;
+            }
+            .nav-link {
+                display: inline-flex;
+                align-items: center;
+                color: $color-white-0;
+                font-weight: $fw-0;
+                transition: all 0.3s;
+                &.active,
+                &:hover {
+                    color: $color-yellow-0;
+                    .indicator,
+                    i {
+                        color: $color-yellow-0;
+                    }
+                }
+                .indicator {
+                    margin-left: 5px;
+                    color: $color-white-0;
+                    transition: all 0.3s;
+                }
+            }
+            i {
+                margin-right: 5px;
+                color: $color-white-0;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+@include responsive(lg) {
+    .header_menu {
+        .navbar-collapse {
+            max-height: 400px;
+            overflow: scroll;
+            .navbar-nav {
+                background: $color-white-0;
+                .nav-item {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    padding: 0;
+                    .nav-link {
+                        padding: 12px 20px;
+                        line-height: $lh-7;
+                        color: $color-dark-1;
+                        border-bottom: solid 1px $color-white-6;
+                        display: block;
+                        &:hover {
+                            color: $color-yellow-0;
+                            i {
+                                color: $color-yellow-0;
+                            }
+                        }
+                        i {
+                            color: $color-dark-1;
+                        }
+                    }
+                    .indicator {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 60px;
+                        height: 45px;
+                        text-align: center;
+                        border-left: solid 1px $color-white-5;
+                        font-size: $fs-13;
+                        line-height: $lh-3;
+                        color: $color-dark-1;
+                        &:hover {
+                            color: $color-yellow-0;
+                        }
+                    }
+                    &.diliver-vertical {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
